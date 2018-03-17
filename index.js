@@ -1,5 +1,4 @@
-var BARS = " ▏▎▍▌▋▊▉█";
-//var BARS = "01234567";
+var BARS = ' ▏▎▍▌▋▊▉█';
 
 function makechars(char, n) {
   return Array(n + 1).join(char);
@@ -17,7 +16,7 @@ function progress(options) {
     throw new Error('width must be at least 1');
   }
 
-  return function (value) {
+  return function(value) {
     if (value > max) {
       value = max;
     } else if (value < min) {
