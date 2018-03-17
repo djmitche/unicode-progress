@@ -7,9 +7,9 @@ function makechars(char, n) {
 
 function progress(options) {
   options = options || {};
-  var width = options.width || 80;
-  var min = options.min || 0;
-  var max = options.max || 100;
+  var width = options.width !== undefined ? options.width : 80;
+  var min = options.min !== undefined ? options.min : 0;
+  var max = options.max !== undefined ? options.max : 100;
   if (min >= max) {
     throw new Error('min must be less than max');
   }
@@ -22,6 +22,10 @@ function progress(options) {
       value = max;
     } else if (value < min) {
       value = min;
+    }
+    if (value == max) {
+      // special-case this value, otherwise we will get an extra-wide result
+      return makechars(BARS[9], width);
     }
     var chars = width * (value - min) / (max - min);
     var intchars = Math.floor(chars);

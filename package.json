@@ -2,8 +2,18 @@
   "name": "unicode-progress",
   "version": "1.0.0",
   "description": "Progress bar text in unicode",
+  "scripts": {
+    "test": "mocha test/*_test.js"
+  },
+  "files": [
+    "index.js"
+  ],
   "main": "index.js",
   "repository": "https://github.com/djmitche/unicode-progress",
   "author": "Dustin J. Mitchell <dustin@mozilla.com>",
-  "license": "MPL-2.0"
+  "license": "MPL-2.0",
+  "devDependencies": {
+    "assume": "^2.0.1",
+    "mocha": "^5.0.4"
+  }
 }
