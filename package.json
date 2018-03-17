@@ -1,0 +1,9 @@
+{
+  "name": "unicode-progress",
+  "version": "1.0.0",
+  "description": "Progress bar text in unicode",
+  "main": "index.js",
+  "repository": "https://github.com/djmitche/unicode-progress",
+  "author": "Dustin J. Mitchell <dustin@mozilla.com>",
+  "license": "MPL-2.0"
+}
